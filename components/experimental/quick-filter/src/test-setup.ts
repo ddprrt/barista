@@ -14,8 +14,4 @@
  * limitations under the License.
  */
 
-export * from './mock-get-computed-style';
-export * from './mock-icon-testing-module';
-export * from './mock-intersection-observer';
-export * from './mock-object-property';
-export * from './mock-icon-testing-module';
+import 'jest-preset-angular';

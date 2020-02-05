@@ -177,7 +177,7 @@ export const DT_FILTER_FIELD_TYPING_DEBOUNCE = 200;
     ]),
   ],
 })
-export class DtFilterField<T>
+export class DtFilterField<T = any>
   implements CanDisable, AfterViewInit, OnDestroy, OnChanges {
   /** Label for the filter field (e.g. "Filter by"). Will be placed next to the filter icon. */
   @Input() label = '';
@@ -506,7 +506,10 @@ export class DtFilterField<T>
       });
     // tslint:disable-next-line: deprecation
     this.tags.changes
-      .pipe(startWith(null), takeUntil(this._destroy$))
+      .pipe(
+        startWith(null),
+        takeUntil(this._destroy$),
+      )
       .subscribe(() => {
         // tslint:disable-next-line: deprecation
         this._currentTags.next(this.tags.toArray());

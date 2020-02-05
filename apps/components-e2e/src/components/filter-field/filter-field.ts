@@ -106,10 +106,18 @@ const TEST_DATA_2 = {
         unit: 's',
       },
     },
+    {
+      name: 'Not in Quickfilter',
+      autocomplete: [
+        { name: 'Option1' },
+        { name: 'Option2' },
+        { name: 'Option3' },
+      ],
+    },
   ],
 };
 
-const DATA = [TEST_DATA, TEST_DATA_2];
+export const DATA = [TEST_DATA, TEST_DATA_2];
 
 @Component({
   selector: 'dt-e2e-filter-field',

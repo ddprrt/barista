@@ -14,8 +14,18 @@
  * limitations under the License.
  */
 
-export * from './mock-get-computed-style';
-export * from './mock-icon-testing-module';
-export * from './mock-intersection-observer';
-export * from './mock-object-property';
-export * from './mock-icon-testing-module';
+import { Component } from '@angular/core';
+import { DtFilterFieldDefaultDataSource } from '@dynatrace/barista-components/filter-field';
+import { DATA } from '../../filter-field/filter-field';
+
+@Component({
+  selector: 'dt-e2e-quick-filter',
+  templateUrl: 'quick-filter.html',
+})
+export class DtE2EQuickFilter {
+  _dataSource = new DtFilterFieldDefaultDataSource(DATA[1]);
+
+  switchToDataSource(targetIndex: number): void {
+    this._dataSource = new DtFilterFieldDefaultDataSource(DATA[targetIndex]);
+  }
+}

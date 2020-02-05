@@ -1,0 +1,25 @@
+{
+  "title": "Quick Filter",
+  "description": "",
+  "postid": "quick-filter",
+  "identifier": "Qf",
+  "category": "components",
+  "public": true,
+  "contributors": {
+    "dev": [
+      {
+        "name": "Lukas Holzer",
+        "gitHubUser": "lukasholzer"
+      }
+    ],
+    "ux": [
+      {
+        "name": "Xavier Javaloyas",
+        "gitHubUser": "Xavi-J"
+      }
+    ]
+  },
+  "properties": ["work in progress", "experimental"],
+  "related": ["filter field"],
+  "tags": ["filter", "filter field", "quick filter", "angular", "component"]
+}

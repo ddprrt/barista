@@ -14,8 +14,13 @@
  * limitations under the License.
  */
 
-export * from './mock-get-computed-style';
-export * from './mock-icon-testing-module';
-export * from './mock-intersection-observer';
-export * from './mock-object-property';
-export * from './mock-icon-testing-module';
+import { DELIMITER } from '../../../filter-field/src/filter-field-util';
+
+export function buildIdPathsFromFilters(filters: any[][]): string[] {
+  return filters.map(path =>
+    path.reduce(
+      (previousValue, currentValue) =>
+        `${previousValue.name}${DELIMITER}${currentValue.name}${DELIMITER}`,
+    ),
+  );
+}

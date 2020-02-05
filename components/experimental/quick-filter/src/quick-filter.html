@@ -1,0 +1,45 @@
+<dt-filter-field
+  [dataSource]="_filterFieldDataSource$ | async"
+  (filterChanges)="_filterFiledChanged($event)"
+  label="Filter by"
+  clearAllLabel="Clear all"
+></dt-filter-field>
+
+<dt-drawer-container class="dt-quick-filter-drawer">
+  <dt-drawer #drawer opened>
+    <button
+      *ngIf="drawer.opened"
+      class="dt-quick-filter-close"
+      aria-label="Closes the quick filter bar"
+      (click)="drawer.close()"
+    >
+      ◀︎
+    </button>
+
+    <h3 class="dt-quick-filter-title">
+      <ng-content select="dt-quick-filter-title"></ng-content>
+    </h3>
+    <p class="dt-quick-filter-sub-title">
+      <ng-content select="dt-quick-filter-sub-title"></ng-content>
+    </p>
+
+    <dt-quick-filter-group
+      *ngFor="let nodeDef of _autocompleteData$ | async"
+      [activeFilters]="_activeFilters$ | async"
+      [nodeDef]="nodeDef"
+      (filterChange)="_changeFilter($event)"
+    ></dt-quick-filter-group>
+  </dt-drawer>
+
+  <article class="dt-quick-filter-content">
+    <button
+      *ngIf="!drawer.opened"
+      class="dt-quick-filter-open"
+      aria-label="Opens the quick filter bar"
+      (click)="drawer.open()"
+    >
+      ▶︎
+    </button>
+    <ng-content></ng-content>
+  </article>
+</dt-drawer-container>

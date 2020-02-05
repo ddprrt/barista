@@ -20,6 +20,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/quick-filter',
+  },
+  {
     path: 'button',
     loadChildren: () =>
       import('../components/button/button.module').then(
@@ -122,6 +127,13 @@ export const routes: Routes = [
     loadChildren: () =>
       import('../components/progress-bar/progress-bar.module').then(
         module => module.DtE2EProgressBarModule,
+      ),
+  },
+  {
+    path: 'quick-filter',
+    loadChildren: () =>
+      import('../components/quick-filter/quick-filter.module').then(
+        module => module.DtE2EQuickFilterModule,
       ),
   },
   {

@@ -28,6 +28,13 @@ import {
 
 fixture('Quick Filter')
   .page('http://localhost:4200/quick-filter')
+  .meta({
+    'filter-field': true,
+    'quick-filter': true,
+    drawer: true,
+    checkbox: true,
+    radio: true,
+  })
   .beforeEach(async (testController: TestController) => {
     await testController.resizeWindow(1200, 800);
     await waitForAngular();

@@ -19,7 +19,7 @@
 
 import { ENTER, ESCAPE } from '@angular/cdk/keycodes';
 import { PlatformModule } from '@angular/cdk/platform';
-import { HttpClientModule, HttpXhrBackend } from '@angular/common/http';
+import { HttpXhrBackend } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Component, ViewChild } from '@angular/core';
 import {
@@ -50,7 +50,7 @@ import {
   createComponent,
   dispatchFakeEvent,
   dispatchKeyboardEvent,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
 
 describe('DtInlineEditor', () => {
   beforeEach(() => {
@@ -61,7 +61,7 @@ describe('DtInlineEditor', () => {
         NoopAnimationsModule,
         PlatformModule,
         ReactiveFormsModule,
-        HttpClientModule,
+        HttpClientTestingModule,
         DtIconModule.forRoot({ svgIconLocation: `{{name}}.svg` }),
       ],
       declarations: [

@@ -19,7 +19,7 @@ import { sync as globSync } from 'glob';
 import { promises as fs } from 'fs';
 import * as lunr from 'lunr';
 import { load as cheerioLoad } from 'cheerio';
-import { BaSinglePageContent } from '@dynatrace/barista-components/barista-definitions';
+import { BaSinglePageContent } from '@dynatrace/barista-definitions';
 import { environment } from 'tools/environments/barista-environment';
 
 const DIST_DIR = environment.distDir;

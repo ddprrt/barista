@@ -19,10 +19,11 @@ import { Component } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { DtAlert, DtAlertModule } from '@dynatrace/barista-components/alert';
+import { DtAlert } from './alert';
+import { DtAlertModule } from './alert-module';
 import { DtIconModule } from '@dynatrace/barista-components/icon';
 
-import { createComponent } from '@dynatrace/barista-components/testing/browser';
+import { createComponent } from '@dynatrace/testing/browser';
 
 describe('DtAlert', () => {
   beforeEach(async(() => {

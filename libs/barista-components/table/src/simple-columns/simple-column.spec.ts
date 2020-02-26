@@ -41,7 +41,7 @@ import {
 import {
   createComponent,
   dispatchMouseEvent,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
 
 describe('DtTable SimpleColumns', () => {
   beforeEach(async(() => {

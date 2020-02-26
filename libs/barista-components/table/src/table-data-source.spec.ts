@@ -43,7 +43,7 @@ import {
 import {
   createComponent,
   dispatchMouseEvent,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
 
 const PAGE_SIZE = 2;
 

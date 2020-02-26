@@ -66,6 +66,7 @@
     "nx-enforce-module-boundaries": [
       true,
       {
+        "allow": ["@dynatrace/barista-icons"],
         "depConstraints": [
           {
             "sourceTag": "scope:components",

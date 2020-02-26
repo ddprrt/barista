@@ -26,10 +26,7 @@ import {
   DtExpandableTextModule,
 } from '@dynatrace/barista-components/expandable-text';
 
-import {
-  createComponent,
-  dispatchFakeEvent,
-} from '@dynatrace/barista-components/testing/browser';
+import { createComponent, dispatchFakeEvent } from '@dynatrace/testing/browser';
 
 /**
  * insert your tests here

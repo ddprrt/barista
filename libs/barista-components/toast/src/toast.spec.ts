@@ -38,10 +38,7 @@ import {
   DtToastModule,
 } from '@dynatrace/barista-components/toast';
 
-import {
-  createComponent,
-  dispatchFakeEvent,
-} from '@dynatrace/barista-components/testing/browser';
+import { createComponent, dispatchFakeEvent } from '@dynatrace/testing/browser';
 
 describe('DtToast', () => {
   let dtToast: DtToast;

@@ -39,9 +39,9 @@ import {
   createComponent,
   MockNgZone,
   mockGetComputedStyle,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
 
-import { mockObjectProperty } from '@dynatrace/barista-components/testing/node';
+import { mockObjectProperty } from '@dynatrace/testing/node';
 
 import { _DtFilterFieldTagData } from '../types';
 import { DtOverlayTrigger } from '@dynatrace/barista-components/overlay';

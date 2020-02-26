@@ -44,7 +44,7 @@ import { DtThemingModule } from '@dynatrace/barista-components/theming';
 import {
   createComponent,
   MockIntersectionObserver,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
 import { DtChartTooltipData } from '../highcharts/highcharts-tooltip-types';
 import {
   DT_UI_TEST_CONFIG,

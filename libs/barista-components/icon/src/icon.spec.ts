@@ -24,16 +24,16 @@ import {
 import { Component } from '@angular/core';
 import { TestBed, async, inject } from '@angular/core/testing';
 
-import {
-  DtIconModule,
-  getDtIconNoConfigProviderError,
-  getDtIconNoHttpProviderError,
-} from '@dynatrace/barista-components/icon';
+import { DtIconModule } from './icon-module';
 
 import {
   createComponent,
   wrappedErrorMessage,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
+import {
+  getDtIconNoConfigProviderError,
+  getDtIconNoHttpProviderError,
+} from './icon-registry';
 
 /**
  * Fake URLs and associated SVG documents used by tests.

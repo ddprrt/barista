@@ -17,6 +17,7 @@
 import { ExamplePackageMetadata } from './metadata';
 import { join } from 'path';
 import { transformAndWriteTemplate, getImportExportPath } from './util';
+import { symbolName } from 'typescript';
 
 export async function generateExamplesLibBarrelFile(
   packageMetas: ExamplePackageMetadata[],
@@ -35,7 +36,7 @@ export async function generateExamplesLibBarrelFile(
         moduleExports.push(
           `export { ${
             packageMeta.moduleClassName
-          } } from './${getImportExportPath(
+          } } from '${getImportExportPath(
             packageMeta.moduleFile,
             examplesRoot,
           )}';`,

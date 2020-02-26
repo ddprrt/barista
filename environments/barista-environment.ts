@@ -39,7 +39,7 @@ const INTERNAL_LINKS = process.env.INTERNAL_LINKS;
 
 export const environment: BaEnvironment = {
   rootDir: ROOT_DIR,
-  distDir: join(ROOT_DIR, 'dist', 'apps', 'barista', 'data'),
+  distDir: join(ROOT_DIR, 'dist', 'apps', 'barista-design-system', 'data'),
   examplesMetadataDir: join(ROOT_DIR, 'dist'),
   examplesMetadataFileName: 'examples-metadata.json',
   examplesLibDir: join(ROOT_DIR, 'libs', 'examples', 'src'),
@@ -50,7 +50,7 @@ export const environment: BaEnvironment = {
     'src',
   ),
   demosAppDir: join(ROOT_DIR, 'apps', 'demos', 'src'),
-  baristaAppDir: join(ROOT_DIR, 'apps', 'barista', 'src'),
+  baristaAppDir: join(ROOT_DIR, 'apps', 'barista-design-system', 'src'),
   iconsRoot: ICONS_ROOT,
   iconsChangelogFileName: ICONS_CHANGELOG,
   strapiEndpoint: STRAPI_ENDPOINT,

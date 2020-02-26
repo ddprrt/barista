@@ -46,7 +46,7 @@ import {
   createComponent,
   dispatchMouseEvent,
   wrappedErrorMessage,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
 
 describe('DtSort', () => {
   let fixture: ComponentFixture<DtTableSortApp>;

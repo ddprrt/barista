@@ -49,7 +49,7 @@ import {
   createComponent,
   wrappedErrorMessage,
   dispatchFakeEvent,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
 import {
   DtFormFieldModule,
   getDtFormFieldDuplicatedHintError,
@@ -385,18 +385,14 @@ describe('DtFormField without forms', () => {
   }));
 
   it('validates the type', fakeAsync(() => {
-    const fixture = TestBed.createComponent(DtInputInvalidTypeTestController);
-
     // Technically this throws during the OnChanges detection phase,
-    // so the error is really a ChangeDetectionError and it becomes
-    // hard to build a full exception to compare with.
-    // We just check for any exception in this case.
+    // so the error is really a ChangeDetectionError
     expect(() => {
+      const fixture = TestBed.createComponent(DtInputInvalidTypeTestController);
       fixture.detectChanges();
-    })
-      .toThrow
-      /* new DtInputUnsupportedTypeError('file') */
-      ();
+    }).toThrowErrorMatchingInlineSnapshot(
+      `"Input type \\"file\\" isn't supported by dtInput."`,
+    );
   }));
 
   it('supports hint labels elements', fakeAsync(() => {

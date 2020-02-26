@@ -79,7 +79,7 @@ import {
   createComponent,
   createKeyboardEvent,
   wrappedErrorMessage,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
 
 describe('DtSelect', () => {
   let overlayContainer: OverlayContainer;

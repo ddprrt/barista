@@ -32,7 +32,7 @@ import {
   DtToggleButtonItem,
 } from '@dynatrace/barista-components/toggle-button-group';
 
-import { createComponent } from '@dynatrace/barista-components/testing/browser';
+import { createComponent } from '@dynatrace/testing/browser';
 
 describe('DtToggleButtonGroup', () => {
   beforeEach(async(() => {

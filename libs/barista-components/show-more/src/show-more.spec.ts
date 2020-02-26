@@ -17,8 +17,7 @@
 // tslint:disable no-lifecycle-call no-use-before-declare no-magic-numbers
 // tslint:disable no-any max-file-line-count no-unbound-method use-component-selector
 
-import { HttpClientModule, HttpXhrBackend } from '@angular/common/http';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HttpXhrBackend } from '@angular/common/http';
 import { Component, DebugElement } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -28,15 +27,16 @@ import {
   DtShowMore,
   DtShowMoreModule,
 } from '@dynatrace/barista-components/show-more';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { createComponent } from '@dynatrace/barista-components/testing/browser';
+import { createComponent } from '@dynatrace/testing/browser';
 
 describe('DtShowMore', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         DtShowMoreModule,
-        HttpClientModule,
+        HttpClientTestingModule,
         DtIconModule.forRoot({ svgIconLocation: `{{name}}.svg` }),
       ],
       declarations: [TestApp],

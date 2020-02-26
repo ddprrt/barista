@@ -17,7 +17,7 @@
     }
   },
   "projects": {
-    "barista": {
+    "barista-design-system": {
       "tags": ["type:app"]
     },
     "demos": {
@@ -56,7 +56,7 @@
       "tags": ["type:tooling", "type:shared"]
     },
     "shared-barista-definitions": {
-      "tags": ["type:types"]
+      "tags": ["type:types", "type:library"]
     },
     "examples": {
       "tags": ["scope:examples", "type:library"]

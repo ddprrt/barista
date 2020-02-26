@@ -23,7 +23,7 @@ import { By } from '@angular/platform-browser';
 
 import { DtOption, DtOptionModule } from '@dynatrace/barista-components/core';
 
-import { createComponent } from '@dynatrace/barista-components/testing/browser';
+import { createComponent } from '@dynatrace/testing/browser';
 
 describe('DtOption', () => {
   beforeEach(async(() => {

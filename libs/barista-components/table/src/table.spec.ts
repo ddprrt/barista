@@ -53,9 +53,9 @@ import { By } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { DtIconModule } from '@dynatrace/barista-components/icon';
 import { DtIndicatorModule } from '@dynatrace/barista-components/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { createComponent } from '@dynatrace/barista-components/testing/browser';
+import { createComponent } from '@dynatrace/testing/browser';
 
 describe('DtTable', () => {
   beforeEach(async(() => {
@@ -66,7 +66,7 @@ describe('DtTable', () => {
         DtEmptyStateModule,
         DtIconModule.forRoot({ svgIconLocation: `{{name}}.svg` }),
         DtLoadingDistractorModule,
-        HttpClientModule,
+        HttpClientTestingModule,
         NoopAnimationsModule,
         TestExpandableComponentModule,
         DtIndicatorModule,

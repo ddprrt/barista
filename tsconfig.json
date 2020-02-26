@@ -20,10 +20,6 @@
     "target": "es5",
     "typeRoots": ["node_modules/@types"],
     "paths": {
-      "@dynatrace/tools/shared": ["libs/tools/shared/src/index.ts"],
-      "@dynatrace/barista-definitions": [
-        "libs/shared/barista-definitions/src/index.ts"
-      ],
       "@dynatrace/barista-components/alert": [
         "libs/barista-components/alert/index.ts"
       ],
@@ -200,6 +196,10 @@
       "@dynatrace/testing/browser": ["libs/testing/browser/src/index.ts"],
       "@dynatrace/testing/fixtures": ["libs/testing/fixtures/src/index.ts"],
       "@dynatrace/tools/environments": ["libs/tools/environments/src/index.ts"],
+      "@dynatrace/tools/shared": ["libs/tools/shared/src/index.ts"],
+      "@dynatrace/barista-definitions": [
+        "libs/shared/barista-definitions/src/index.ts"
+      ],
       "@environments/*": ["environments/*.ts"]
     },
     "plugins": [

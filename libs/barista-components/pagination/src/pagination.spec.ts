@@ -17,7 +17,6 @@
 // tslint:disable no-lifecycle-call no-use-before-declare no-magic-numbers
 // tslint:disable no-any max-file-line-count no-unbound-method use-component-selector
 
-import { HttpClientModule } from '@angular/common/http';
 import { Component, ViewChild } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -28,10 +27,7 @@ import {
   DtPaginationModule,
 } from '@dynatrace/barista-components/pagination';
 
-import {
-  createComponent,
-  dispatchFakeEvent,
-} from '@dynatrace/barista-components/testing/browser';
+import { createComponent, dispatchFakeEvent } from '@dynatrace/testing/browser';
 import {
   ARIA_DEFAULT_CURRENT_LABEL,
   ARIA_DEFAULT_ELLIPSES,
@@ -40,13 +36,14 @@ import {
   ARIA_DEFAULT_PAGE_LABEL,
   ARIA_DEFAULT_PREVIOUS_LABEL,
 } from './pagination-defaults';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('DtPagination', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         DtPaginationModule,
-        HttpClientModule,
+        HttpClientTestingModule,
         DtIconModule.forRoot({ svgIconLocation: `{{name}}.svg` }),
       ],
       declarations: [

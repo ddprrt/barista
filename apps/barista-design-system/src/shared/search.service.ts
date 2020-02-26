@@ -16,7 +16,7 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BaSearchResult } from '@dynatrace/barista-components/barista-definitions';
+import { BaSearchResult } from '@dynatrace/barista-definitions';
 import { Observable } from 'rxjs';
 
 @Injectable()

@@ -23,7 +23,7 @@ import { By } from '@angular/platform-browser';
 
 import { DtLoadingDistractorModule } from '@dynatrace/barista-components/loading-distractor';
 
-import { createComponent } from '@dynatrace/barista-components/testing/browser';
+import { createComponent } from '@dynatrace/testing/browser';
 
 describe('DtLoadingSpinner', () => {
   beforeEach(async(() => {

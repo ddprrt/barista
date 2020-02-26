@@ -40,7 +40,7 @@ import {
   createComponent,
   dispatchKeyboardEvent,
   dispatchMouseEvent,
-} from '@dynatrace/barista-components/testing/browser';
+} from '@dynatrace/testing/browser';
 
 describe('DtOverlayTrigger', () => {
   let overlayContainer: OverlayContainer;

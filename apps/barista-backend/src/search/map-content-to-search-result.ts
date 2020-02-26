@@ -17,7 +17,7 @@
 import {
   BaSearchResult,
   BaSinglePageContent,
-} from '@dynatrace/barista-components/barista-definitions';
+} from '@dynatrace/barista-definitions';
 import { Index } from 'lunr';
 
 const EXCERPT_MATCH_LENGTH = 50;

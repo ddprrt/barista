@@ -1,7 +1,7 @@
 module.exports = {
   name: 'radial-chart',
-  preset: '../../jest.config.js',
-  coverageDirectory: '../../coverage/components/radial-chart',
+  preset: '../../../jest.config.js',
+  coverageDirectory: '../../../coverage/components/radial-chart',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',
